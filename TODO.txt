@@ -1,0 +1,38 @@
+# PHASE 1: Frontend Setup & Core UI
+- [ ] Plan app structure and routes
+- [ ] Setup React Router with basic pages (Home, Observations, Settings)
+- [ ] Create navigation menu for switching pages
+- [ ] Build Home page with Tailwind styled header and welcome message
+- [ ] Create Observation Input Form component
+- [ ] Add controlled inputs: text, dropdown, date picker (optional)
+- [ ] Style form using Tailwind CSS
+- [ ] Add submit button that logs form data to console
+- [ ] Create Observations List component with static example data
+- [ ] Style Observations List with Tailwind
+- [ ] Prepare form to send data using Axios (mock API call)
+
+# PHASE 2: Backend Development
+- [ ] Setup Express routes for observations: POST /api/observations and GET /api/observations
+- [ ] Define Mongoose schema/model for observations
+- [ ] Test backend routes with Postman or curl
+- [ ] Connect frontend form submit to backend POST route with Axios
+- [ ] Fetch observations from backend GET route and render in list component
+- [ ] Add error handling and loading state UI on frontend
+- [ ] Add form validation (required fields, max length)
+- [ ] Display success message on successful submission
+- [ ] (Optional) Implement edit/delete functionality for observations
+
+# PHASE 3: Advanced Features (Optional/Future)
+- [ ] Add backend route to interact with OpenAI API for writing assistance
+- [ ] Connect frontend to OpenAI backend route and display AI-generated suggestions
+- [ ] Allow users to edit/accept AI-generated observation text
+- [ ] (Optional) Add user authentication (login/signup, JWT)
+- [ ] Associate observations with users and secure routes
+- [ ] Clean up code, add comments, optimize performance
+- [ ] Prepare frontend/backend for deployment (build, env vars)
+- [ ] Deploy application to hosting platform (e.g. Vercel, Heroku)
+
+# General
+- [ ] Use Git for version control, commit often
+- [ ] Debug using DevTools and VSCode debugger
+- [ ] Write reusable components and keep code modular
