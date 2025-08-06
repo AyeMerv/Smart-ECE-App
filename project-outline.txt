@@ -1,0 +1,79 @@
+Build a Personal Educator Toolkit
+A smart web app for educators to help them draft, organise, and reflect on observations and programming—used privately by the educator, not officially submitted to services or parents.
+
+No regulation/compliance risk – No child data, no sensitive info.
+
+Educators often write in their own notebooks or Google Docs anyway. This replaces that.
+
+AI-powered writing assistant
+
+showcase AI, EYLF mapping, and thoughtful UX.
+
+
+Core Idea
+Observation Assistant App
+A lightweight web app where educators can:
+
+Write or dictate observations
+
+Upload media (optional, private)
+
+Use AI to generate EYLF-linked drafts
+
+Organise their observations by theme, child alias, or outcome
+
+Export drafts to PDF/Doc or copy/paste to other systems (e.g., Storypark)
+
+MVP Feature Set
+Feature	Description
+AI Observation Generator - Text or voice-to-text → Draft linked to EYLF
+Outcome Mapping - Automatically or manually tag outcomes from EYLF V2.0
+Organiser - View observations by alias (e.g., "Child A"), date, or outcome
+Draft Mode - Edit AI-suggested draft before finalising
+Export/Copy - Copy to clipboard or export to Word/PDF
+Local Storage Only - No backend needed; keep data private
+
+Tech Stack Suggestion
+Frontend  
+AI Backend
+React + Vite
+
+TailwindCSS for quick, clean UI
+
+Node.js Express + OpenAI API for AI endpoint
+
+Could also be built as a fully static app with AI requests sent directly from frontend (via API key stored safely in backend or with a token proxy).
+
+Example Use Case
+Emma, a diploma-qualified educator, is prepping weekly observations.
+She:
+
+Logs into app
+
+Dictates or types her notes: “Liam built a tall tower with blocks and said, ‘This is my castle.’”
+
+Gets a generated draft:
+
+“Liam engaged in constructive play, demonstrating creativity and persistence as he built a tall tower. This supports Outcome 4.1 and 1.2.”
+
+Edits, tags it to Outcome 4.1, saves.
+
+Copies it into Storypark later, or prints it for her records.
+
+
+Optional Stretch Goals
+
+Create a Chrome extension version that runs inside platforms like Storypark or Xplor
+
+Add custom templates or sentence banks for educators
+
+Add reflection prompts for professional development (e.g., “How did you support Outcome 5.2 today?”)
+
+Summary
+
+Purpose - Help educators personally generate, edit, and organise observations
+User - Individual educator (not service-wide or parent-facing)
+Legal - No storage of real child data = safe
+Portfolio Value - High (AI, useful, niche)
+Dev Effort - Medium (solo achievable)
+Unique Angle - Educator-first, not system-focused
