@@ -1,15 +1,20 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import './App.css';
 import { Routes, Route } from "react-router-dom";;
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About"
 import Nav from "./components/Navigation";
+import Observations from "./pages/Oberservations";
 
 function App() {
 
+  const hasRun = useRef(false)
+
   useEffect(() => {
-    axios.get("http://localhost:5000/api/test").then(res => console.log(res.data)).catch(err => console.error(err));
+    if (hasRun.current) return;
+    hasRun.current = true;
+    axios.get("http://localhost:5000/api/ai").then(res => console.log(res.data)).catch(err => console.error(err));
   }, []);
 
   return (
@@ -17,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Observations" element={<Observations />} />
         </Routes>
         <Nav />
     </div>

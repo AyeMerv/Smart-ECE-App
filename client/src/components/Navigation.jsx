@@ -16,6 +16,11 @@ export default function Nav() {
                         ℹ️
                     </Link>
                 </button>
+                <button className="shadow-lg">
+                    <Link to="/observations" className="block">
+                        🔭
+                    </Link>
+                </button>
         </div>
 
 
