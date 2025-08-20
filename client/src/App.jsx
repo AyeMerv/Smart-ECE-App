@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";;
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About"
 import Nav from "./components/Navigation";
-import Observations from "./pages/Oberservations";
+import Observations from "./pages/Observations";
 
 function App() {
 
