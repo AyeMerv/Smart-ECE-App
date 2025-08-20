@@ -16,14 +16,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/ai", async (req, res) => {
+app.post("/api/ai", async (req, res) => {
     try {
         if (!generateObservation) {
             return res.status(503).json({ error: "AI service not ready" });
         }
-        const observation = await generateObservation();
+        
+        const { userInput } = req.body;
+        
+        if (!userInput || userInput.trim() === '') {
+            return res.status(400).json({ error: "User input is required" });
+        }
+        
+        const observation = await generateObservation(userInput);
         res.json({ observation });
     } catch (error) {
+        console.error('Error generating observation:', error);
         res.status(500).json({ error: "Failed to generate observation" });
     }
 });

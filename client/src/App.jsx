@@ -9,14 +9,6 @@ import Observations from "./pages/Observations";
 
 function App() {
 
-  const hasRun = useRef(false)
-
-  useEffect(() => {
-    if (hasRun.current) return;
-    hasRun.current = true;
-    axios.get("http://localhost:5000/api/ai").then(res => console.log(res.data)).catch(err => console.error(err));
-  }, []);
-
   return (
     <div className="p-6">   
         <Routes>
